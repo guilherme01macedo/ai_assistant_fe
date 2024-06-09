@@ -5,7 +5,7 @@ import Header from './index';
 describe('Header Component', () => {
   test('renders', () => {
     render(<Header  />);
-    const cardTitleElement = screen.getByText('Guilherme Macedo');
+    const cardTitleElement = screen.getByText('CHATBOT');
     expect(cardTitleElement).toBeInTheDocument();
   });
 });

@@ -1,13 +1,19 @@
-$backgroundColor: #151515;
+$backgroundColor: #dddfe0;
 
 body{
   background-color: $backgroundColor;
   font-family: "Roboto", sans-serif;
-  color: rgba($color: #f3f3f3, $alpha: 1.0);
+  color: rgba($color: #1c2732, $alpha: 1.0);
   margin: 0;
   font-family: 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.app__container{
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .roboto-thin {
