@@ -1,4 +1,7 @@
-$backgroundColor: #dddfe0;
+$backgroundColor: #efefef;
+$small: 480px;
+$medium: 768px;
+
 
 body{
   background-color: $backgroundColor;
@@ -13,7 +16,22 @@ body{
 .app__container{
   display: flex;
   flex-direction: column;
-  
+  width: 100vw;
+  align-items: center;
+}
+
+.app__content{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  gap: 30px;
+  @media screen and (max-width: $small) {
+    width: 90vw;
+    gap: 20px;
+  }
+  @media screen and (min-width: $medium) {
+    width: 60vw;
+  }
 }
 
 .roboto-thin {
