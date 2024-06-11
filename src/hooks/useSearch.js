@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { ROUTE_URL } from '../utils/constants';
 import axios from 'axios';
 
-const useSearch = (search) => {
+const useSearch = () => {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [searchValue, setSearchValue] = useState(false);
 
   useEffect(() => {
-    if (!search) return;
+    if (!searchValue) return;
 
     const fetchData = async () => {
       setLoading(true);
@@ -20,12 +21,12 @@ const useSearch = (search) => {
             Accept: 'application/json',
             'Content-Type': 'application/json'
           },
-          params: {searchValue: search}
+          params: {searchValue: searchValue}
         };
       
       
         const response = await axios.get(ROUTE_URL, options);
-        console.log("here", response);
+        console.log("here", response, response.status);
         if (response.status!==200) {
           throw new Error(`Error: ${response.status}`);
         }
@@ -39,9 +40,13 @@ const useSearch = (search) => {
     };
 
     fetchData();
-  }, [search]);
+  }, [searchValue]);
 
-  return { data, loading, error };
+  const getSearchResult = (searchValue) => {
+    setSearchValue(searchValue)
+  };
+
+  return { data, loading, error, getSearchResult};
 };
 
 export default useSearch;

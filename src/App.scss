@@ -20,6 +20,11 @@ body{
   align-items: center;
 }
 
+.app__loading-container{
+  color: #1c2732 !important;
+  align-self: center;
+}
+
 .app__content{
   display: flex;
   flex-direction: column;
