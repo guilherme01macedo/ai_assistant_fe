@@ -2,11 +2,32 @@ import React from 'react';
 import './Input.scss';
 import SearchIcon from '@mui/icons-material/Search';
 
-const CustomInput = () => {
+const CustomInput = (props) => {
+  const { getSearchResult, disabled, setInputValue, inputValue } = props;
+
+  const validateAndSearch = () => {
+    const finalInput=inputValue.trim()
+    if (finalInput.length>0)
+      getSearchResult(finalInput)
+  };
+
+  const handleKeyDown = (e) => {
+    if(e.key === "NumpadEnter" || e.key ==="Enter")
+      validateAndSearch()
+  };
+
   return (
     <div className="input__container">
-      <input type="text" className="input_custom-input" placeholder="Ask me something!"/>
-      <button className="input__icon-button" onClick={() => console.log('search clicked!')}>
+      <input
+        onKeyDown={handleKeyDown}
+        onChange={e => setInputValue(e.target.value)}
+        value={inputValue}
+        disabled={disabled}
+        type="text"
+        className="input_custom-input"
+        placeholder="Ask me something!"
+      />
+      <button disabled={disabled} className={`input__icon-button ${disabled && 'input__icon-button-disabled'}`} onClick={() => validateAndSearch()}>
         <SearchIcon />
       </button>
     </div>

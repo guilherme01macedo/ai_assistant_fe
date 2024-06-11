@@ -26,12 +26,11 @@ const useSearch = () => {
       
       
         const response = await axios.get(ROUTE_URL, options);
-        console.log("here", response, response.status);
+
         if (response.status!==200) {
           throw new Error(`Error: ${response.status}`);
         }
-        const result = await response.json();
-        setData(result);
+        setData(response);
       } catch (error) {
         setError(error.message);
       } finally {

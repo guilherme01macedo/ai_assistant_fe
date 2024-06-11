@@ -5,15 +5,14 @@ import useSearch from './hooks/useSearch';
 import { Skeleton } from '@mui/material';
 
 function App() {
-  const { data, loading, error, getSearchResult } = useSearch(`teste`);
-
+  const { data, loading, error, getSearchResult } = useSearch();
 
   return (
     <div className='app__container'>
       <div className='app__content'>
         <Header />
-        <Form disabled={loading}/>
-        {true && <Skeleton variant="rounded" height={118} />}
+        <Form disabled={loading} getSearchResult={getSearchResult}/>
+        {loading && <Skeleton variant="rounded" height={118} />}
         {error && <p>error...</p>}
       </div>
     </div>

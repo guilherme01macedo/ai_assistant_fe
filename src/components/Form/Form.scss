@@ -6,4 +6,7 @@
 
 .form__icon {
     color: #1c2732;
+    &.disabled{
+        color: rgba(28, 39, 50, 0.6);
+    }
 }

@@ -27,5 +27,11 @@
         background-color: rgba(0, 0, 0, 0.1);
         border-radius: 50%;
     }
-
+    &-disabled{
+        color: rgba(28, 39, 50, 0.6);
+        &:hover {
+            cursor: default;
+            background: none;
+        }
+    }
 }
