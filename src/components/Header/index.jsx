@@ -4,7 +4,7 @@ import './Header.scss';
 const Header = () => {
   return (
     <div className="header__container">
-      <h1>CHATBOT</h1>
+      <h1>MY AI ASSISTANT</h1>
     </div>
   );
 }

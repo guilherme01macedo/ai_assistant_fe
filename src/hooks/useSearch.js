@@ -43,6 +43,7 @@ const useSearch = () => {
 
   const getSearchResult = (searchValue) => {
     setSearchValue(searchValue)
+    setData(null)
   };
 
   return { data, loading, error, getSearchResult};

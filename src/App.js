@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Form from './components/Form';
 import useSearch from './hooks/useSearch';
 import { Skeleton } from '@mui/material';
+import Message from './components/Message';
 
 function App() {
   const { data, loading, error, getSearchResult } = useSearch();
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Form disabled={loading} getSearchResult={getSearchResult}/>
         {loading && <Skeleton variant="rounded" height={118} />}
+        {data && <Message data={data}/>}
         {error && <p>error...</p>}
       </div>
     </div>

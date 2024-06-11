@@ -5,7 +5,7 @@ import Header from './index';
 describe('Header Component', () => {
   test('renders', () => {
     render(<Header  />);
-    const cardTitleElement = screen.getByText('CHATBOT');
+    const cardTitleElement = screen.getByText('MY AI ASSISTANT');
     expect(cardTitleElement).toBeInTheDocument();
   });
 });
