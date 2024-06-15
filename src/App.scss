@@ -30,6 +30,8 @@ body{
   flex-direction: column;
   width: 50vw;
   gap: 30px;
+  justify-content: center;
+  min-height: 70vh;
   @media screen and (max-width: $small) {
     width: 90vw;
     gap: 20px;

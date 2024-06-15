@@ -12,6 +12,7 @@
 .header__image-container {
     width: 40%;
     height: auto;
+    max-width: 250px;
     @media screen and (max-width: variables.$medium) {
         width: 60%;
     }
@@ -21,11 +22,15 @@
         object-fit: cover;
         border-radius: 100%
     }
+    @media screen and (min-width: 1100) {
+        width: 20%;
+    }
 }
 
 .header__animated-text {
     transition: transform 0.4s ease-in-out;
-
+    margin-block-start: 0px;
+    
     &:hover {
         transform: scale(0.7); 
     }
