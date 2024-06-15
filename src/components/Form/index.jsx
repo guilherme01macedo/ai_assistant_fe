@@ -8,7 +8,7 @@ import ShuffleIcon from '@mui/icons-material/Shuffle';
 function Form(props) {
   const [inputValue, setInputValue] = useState('');
   const { getSearchResult, disabled} = props;
-  const { generateRandomString } = useStringRandomizer(setInputValue);
+  const { generateRandomString } = useStringRandomizer(setInputValue, getSearchResult);
   
 
   return (
