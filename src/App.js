@@ -8,6 +8,7 @@ import { CircularProgress } from '@mui/material';
 import Message from './components/Message';
 import ErrorContainer from './components/ErrorContainer';
 import { trackPageView } from './utils/analytics';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const { data, loading, error, getSearchResult } = useSearch();
@@ -28,6 +29,7 @@ function App() {
         {data && <Message data={data}/>}
         {error && <ErrorContainer />}
       </div>
+      <SpeedInsights/>
     </div>
   );
 }
