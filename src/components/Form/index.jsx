@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Form.scss';
 import Input from './Input';
-import DiceIcon from '@mui/icons-material/Casino';
 import { IconButton } from '@mui/material';
 import useStringRandomizer from '../../hooks/useStringRandomizer';
+import ShuffleIcon from '@mui/icons-material/Shuffle';
 
 function App(props) {
   const [inputValue, setInputValue] = useState('');
@@ -22,7 +22,7 @@ function App(props) {
         resetData();
         generateRandomString();
       }}>
-        <DiceIcon classes={{ root: disabled ? 'form__icon-disabled' : 'form__icon' }} />
+        <ShuffleIcon classes={{ root: disabled ? 'form__icon-disabled' : 'form__icon' }} />
       </IconButton>
       <Input setInputValue={setInputValueAndClearSearch} inputValue={inputValue} getSearchResult={getSearchResult} disabled={disabled} />
     </div>

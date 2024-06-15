@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='app__container'>
       <div className='app__content'>
-        <Header />
+        <Header reducedLayout={data || loading}/>
         <Form disabled={loading} getSearchResult={getSearchResult} resetData={resetData} data={data}/>
         {loading && <CircularProgress classes={{root: 'app__loading-container'}}/>}
         {data && <Message data={data}/>}
