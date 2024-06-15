@@ -10,6 +10,7 @@ export const POSSIBLE_RANDOM_QUESTIONS = [
     'How many years of experience with JavaScript do you have?',
     'What is your favorite movie?',
     'What is your favorite book?',
-    'What was the most challeging project you have worked on?',
+    'What was the most challenging project you have worked on?',
     'What advice would you give to someone starting their career in software engineering?',
+    'How was this project built?',
 ]
