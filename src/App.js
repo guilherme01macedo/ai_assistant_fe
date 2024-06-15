@@ -2,8 +2,9 @@ import './App.scss';
 import Header from './components/Header';
 import Form from './components/Form';
 import useSearch from './hooks/useSearch';
-import { Skeleton } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 import Message from './components/Message';
+import ErrorContainer from './components/ErrorContainer';
 
 function App() {
   const { data, loading, error, getSearchResult } = useSearch();
@@ -13,9 +14,9 @@ function App() {
       <div className='app__content'>
         <Header />
         <Form disabled={loading} getSearchResult={getSearchResult}/>
-        {loading && <Skeleton variant="rounded" height={118} />}
+        {loading && <CircularProgress classes={{root: 'app__loading-container'}}/>}
         {data && <Message data={data}/>}
-        {error && <p>error...</p>}
+        {error && <ErrorContainer />}
       </div>
     </div>
   );
