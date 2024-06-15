@@ -16,10 +16,13 @@ const Header = (props) => {
   };
 
   return (
-    <div className="header__container">
-      <div className={reducedLayout? 'header__image-container header__image-reduced-container': 'header__image-container'}>
+    <div className={reducedLayout ? 'header__reduced-container' : 'header__container'}>
+      <div onClick={() => reducedLayout && window.open('https://www.linkedin.com/in/guilherme-macedo-/')} className={reducedLayout ? 'header__image-container header__image-reduced-container' : 'header__image-container'}>
         <img src={headerImg} alt="Header profile pic" />
-        <img className={reducedLayout? 'header__linkedin-image-container header__linkedin-reduced-image-container': 'header__linkedin-image-container'} onClick={() => window.open('https://www.linkedin.com/in/guilherme-macedo-/')} src={linkedinImg} alt="Linkedin logo" />
+        {
+          !reducedLayout &&
+          <img className='header__linkedin-image-container' onClick={() => window.open('https://www.linkedin.com/in/guilherme-macedo-/')} src={linkedinImg} alt="Linkedin logo" />
+        }
       </div>
       {!reducedLayout &&
         <h1
@@ -29,7 +32,6 @@ const Header = (props) => {
         >
           {displayText}
         </h1>
-
       }
     </div>
   );

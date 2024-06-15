@@ -16,7 +16,7 @@ const Message = (props) => {
         return (
             <>
                 <div className="message__container">
-                    <p>{data.data.body.data[0].answer}</p>
+                    <p className="message_padding">{data.data.body.data[0].answer}</p>
                 </div>
                 <div className="message__not-found-container">
                     <p>The distance index of the question is considered medium, which means that the answer might not be perfect. However, you are more than welcome to ask and check by email(guilherme01macedo@gmail.com) or through <a target="_blank"  href="https://www.linkedin.com/in/guilherme-macedo-/" rel="noreferrer">LinkedIn!</a></p>
@@ -26,7 +26,7 @@ const Message = (props) => {
     }
     return (
         <div className="message__container">
-            <p>{data.data.body.data[0].answer}</p>
+            <p className="message_padding">{data.data.body.data[0].answer}</p>
         </div>
     );
 }

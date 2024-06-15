@@ -28,8 +28,7 @@
 }
 
 .header__image-reduced-container{
-    width: 20%;
-    max-width: 150px;
+    width: 100%;
 }
 
 .header__animated-text {
@@ -55,15 +54,10 @@
     }
 }
 
-.header__linkedin-reduced-image-container{
-    width: 30px;
-    height: 30px;
-    bottom: 30px;
-    left: 66%;
 
-    @media screen and (max-width: variables.$medium) {
-        width: 15px;
-        height: 15px;
-        left: 80%;
-    }
+.header__reduced-container{
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    margin-right: 8px;
 }

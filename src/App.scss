@@ -41,6 +41,11 @@ body{
   }
 }
 
+.app__reduced-content{
+  display: flex;
+  flex-direction: row;
+}
+
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;

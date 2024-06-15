@@ -1,15 +1,23 @@
-.message__container{
+.message__container {
     display: flex;
-    padding: 0 8px;
     width: 100%;
     border-radius: 8px;
-    background-color: rgba(31,30,31,255);
+    background-color: rgba(31, 30, 31, 255);
     color: white;
     font-size: 0.8em;
 }
 
-.message__not-found-container{
+.message__not-found-container {
     font-style: italic;
     font-size: 0.8em;
     margin-block-start: 0;
+
+    p:first-child {
+        margin-block-start: 0;
+    }
+
+}
+
+.message_padding {
+    padding: 0 8px,
 }
