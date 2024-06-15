@@ -8,7 +8,7 @@ const Message = (props) => {
     if (distance < 0.35) {
         return (
             <div className="message__not-found-container">
-                <p>The distance index of the question is too small, which means that probaly the question does not yet have the answer. However, you are more than welcome to ask by email(guilherme01macedo@gmail.com) or through <a href="https://www.linkedin.com/in/guilherme-macedo-/">LinkedIn!</a></p>
+                <p>The distance index of the question is too small, which means that probaly the question does not yet have the answer. However, you are more than welcome to ask by email(guilherme01macedo@gmail.com) or through <a target="_blank"  href="https://www.linkedin.com/in/guilherme-macedo-/" rel="noreferrer">LinkedIn!</a></p>
             </div>
         )
     }
@@ -19,7 +19,7 @@ const Message = (props) => {
                     <p>{data.data.body.data[0].answer}</p>
                 </div>
                 <div className="message__not-found-container">
-                    <p>The distance index of the question is considered medium, which means that the answer might not be perfect. However, you are more than welcome to ask and check by email(guilherme01macedo@gmail.com) or through <a href="https://www.linkedin.com/in/guilherme-macedo-/">LinkedIn!</a></p>
+                    <p>The distance index of the question is considered medium, which means that the answer might not be perfect. However, you are more than welcome to ask and check by email(guilherme01macedo@gmail.com) or through <a target="_blank"  href="https://www.linkedin.com/in/guilherme-macedo-/" rel="noreferrer">LinkedIn!</a></p>
                 </div>
             </>
         )
