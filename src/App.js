@@ -7,13 +7,13 @@ import Message from './components/Message';
 import ErrorContainer from './components/ErrorContainer';
 
 function App() {
-  const { data, loading, error, getSearchResult } = useSearch();
+  const { data, loading, error, getSearchResult, resetData } = useSearch();
 
   return (
     <div className='app__container'>
       <div className='app__content'>
         <Header />
-        <Form disabled={loading} getSearchResult={getSearchResult}/>
+        <Form disabled={loading} getSearchResult={getSearchResult} resetData={resetData} data={data}/>
         {loading && <CircularProgress classes={{root: 'app__loading-container'}}/>}
         {data && <Message data={data}/>}
         {error && <ErrorContainer />}

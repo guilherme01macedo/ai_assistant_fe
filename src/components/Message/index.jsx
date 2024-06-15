@@ -5,7 +5,6 @@ const Message = (props) => {
     const { data } = props;
     const distance = data.data.body.distance;
 
-    console.log("here", data.data.body.distance)
     if (distance < 0.35) {
         return (
             <div className="message__not-found-container">

@@ -46,7 +46,11 @@ const useSearch = () => {
     setData(null)
   };
 
-  return { data, loading, error, getSearchResult};
+  const resetData = () => {
+    setData(null)
+  };
+
+  return { data, loading, error, getSearchResult, resetData};
 };
 
 export default useSearch;
