@@ -9,7 +9,7 @@ export const POSSIBLE_RANDOM_QUESTIONS = [
     'Tell me more about yourself',
     'How many years of experience with JavaScript do you have?',
     'What is your favorite book?',
-    'What was the most challenging project you have worked on?',
     'What advice would you give to someone starting their career in software engineering?',
     'How was this project built?',
+    'What is your email contact?',
 ]
