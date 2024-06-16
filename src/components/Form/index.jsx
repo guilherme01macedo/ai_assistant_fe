@@ -13,7 +13,7 @@ function Form(props) {
 
   return (
     <div className='form__container'>
-      <IconButton disabled={disabled} onClick={() => {
+      <IconButton id='shuffle-button' disabled={disabled} onClick={() => {
         generateRandomString();
       }}>
         <ShuffleIcon classes={{ root: disabled ? 'form__icon-disabled' : 'form__icon' }} />
