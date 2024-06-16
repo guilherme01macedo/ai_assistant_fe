@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import './App.scss';
 import Header from './components/Header';
@@ -7,16 +7,12 @@ import useSearch from './hooks/useSearch';
 import { CircularProgress } from '@mui/material';
 import Message from './components/Message';
 import ErrorContainer from './components/ErrorContainer';
-import { trackPageView } from './utils/analytics';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const { data, loading, error, getSearchResult } = useSearch();
   const reducedLayout = data || loading
 
-  useEffect(() => {
-    trackPageView('home');
-  },[]);
 
   return (
     <div className='app__container'>
