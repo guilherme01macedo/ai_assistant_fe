@@ -25,7 +25,7 @@ const CustomInput = (props) => {
         disabled={disabled}
         type="text"
         className="input_custom-input"
-        placeholder="Ask me something!"
+        placeholder="Ask me something about me or my career!"
       />
       <button disabled={disabled} className={`input__icon-button ${disabled && 'input__icon-button-disabled'}`} onClick={() => validateAndSearch()}>
         <SearchIcon classes={{root: 'input__icon-container'}} />

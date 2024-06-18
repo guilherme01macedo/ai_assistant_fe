@@ -23,7 +23,7 @@ describe('Input Component', () => {
       />
     );
 
-    const inputElement = screen.getByPlaceholderText('Ask me something!');
+    const inputElement = screen.getByPlaceholderText('Ask me something about me or my career!');
     const buttonElement = screen.getByRole('button');
 
     expect(inputElement).toBeInTheDocument();
@@ -42,7 +42,7 @@ describe('Input Component', () => {
       />
     );
 
-    const inputElement = screen.getByPlaceholderText('Ask me something!');
+    const inputElement = screen.getByPlaceholderText('Ask me something about me or my career!');
     fireEvent.change(inputElement, { target: { value: 'new input' } });
 
     expect(mockSetInputValue).toHaveBeenCalledWith('new input');
@@ -58,7 +58,7 @@ describe('Input Component', () => {
       />
     );
 
-    const inputElement = screen.getByPlaceholderText('Ask me something!');
+    const inputElement = screen.getByPlaceholderText('Ask me something about me or my career!');
     fireEvent.keyDown(inputElement, { key: 'Enter', code: 'Enter' });
 
     expect(mockGetSearchResult).toHaveBeenCalledWith(inputValue.trim());
@@ -90,7 +90,7 @@ describe('Input Component', () => {
       />
     );
 
-    const inputElement = screen.getByPlaceholderText('Ask me something!');
+    const inputElement = screen.getByPlaceholderText('Ask me something about me or my career!');
     const buttonElement = screen.getByRole('button');
 
     expect(inputElement).toBeDisabled();

@@ -31,7 +31,7 @@ describe('Form Component', () => {
     );
 
     const shuffleButton = screen.getAllByRole('button')[1];
-    const inputElement = screen.getByPlaceholderText('Ask me something!');
+    const inputElement = screen.getByPlaceholderText('Ask me something about me or my career!');
     expect(shuffleButton).toBeInTheDocument();
     expect(inputElement).toBeInTheDocument();
   });
@@ -44,7 +44,7 @@ describe('Form Component', () => {
       />
     );
 
-    const inputElement = screen.getByPlaceholderText('Ask me something!');
+    const inputElement = screen.getByPlaceholderText('Ask me something about me or my career!');
     fireEvent.change(inputElement, { target: { value: 'new input' } });
 
     expect(inputElement).toHaveValue('new input');
@@ -60,7 +60,7 @@ describe('Form Component', () => {
     );
 
     const shuffleButton = screen.getAllByRole('button')[1];
-    const inputElement = screen.getByPlaceholderText('Ask me something!');
+    const inputElement = screen.getByPlaceholderText('Ask me something about me or my career!');
 
     expect(shuffleButton).toBeDisabled();
     expect(inputElement).toBeDisabled();
