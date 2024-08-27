@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './App.scss';
 import Header from './components/Header';
@@ -10,6 +10,8 @@ import ErrorContainer from './components/ErrorContainer';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
+  window.location.replace("https://www.linkedin.com/in/guilherme-macedo-/");
+
   const { data, loading, error, getSearchResult } = useSearch();
   const reducedLayout = data || loading
 
