@@ -10,8 +10,6 @@ import ErrorContainer from './components/ErrorContainer';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
-  window.location.replace("https://www.linkedin.com/in/guilherme-macedo-/");
-
   const { data, loading, error, getSearchResult } = useSearch();
   const reducedLayout = data || loading
 
